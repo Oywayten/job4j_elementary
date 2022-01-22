@@ -36,7 +36,7 @@ public class SqAreaTest {
     public void whenP30K20ThenSquare10Dot20() {
         double p = 30;
         double k = 20;
-        double expected = 10.2;
+        double expected = 10.20;
         double out = SqArea.square(p, k);
         Assert.assertEquals(expected, out, 0.01);
     }
