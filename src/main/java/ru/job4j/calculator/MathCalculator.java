@@ -19,7 +19,7 @@ public class MathCalculator {
                 + minusAndDiv(first, second);
     }
 
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         System.out.println("Результат расчета sumAndMultiply равен: " + sumAndMultiply(10, 20));
         System.out.println("Результат расчета minusAndDiv равен: " + minusAndDiv(10, 20));
         System.out.println("Результат расчета allOperationsOfMathFunction равен: " + allOperationsOfMathFunction(10, 20));
