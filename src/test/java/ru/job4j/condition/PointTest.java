@@ -16,6 +16,7 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+
     @Test
     public void when20To30Then1() {
         double expected = 1;
