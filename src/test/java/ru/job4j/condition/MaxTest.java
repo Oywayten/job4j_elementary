@@ -14,11 +14,11 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMaxMinus105To2Then2() {
-        int left = -105;
+    public void whenMax10To2Then2() {
+        int left = 10;
         int right = 2;
         int result = Max.max(left, right);
-        int expected = 2;
+        int expected = 10;
         Assert.assertEquals(result, expected);
     }
 

@@ -9,4 +9,3 @@ public class Max {
         System.out.println(max(-105, 14));
     }
 }
-
