@@ -88,3 +88,4 @@ public class MatrixCheckTest {
         Assert.assertArrayEquals(expected, result);
     }
 }
+
