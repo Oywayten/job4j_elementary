@@ -18,4 +18,14 @@ public class MatrixCheck {
         }
         return true;
     }
+
+    public static char[] extractDiagonal(char[][] board) {
+        int j = 0;
+        char[] newArr = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            newArr[i] = board[j][i];
+            j++;
+        }
+        return newArr;
+    }
 }
