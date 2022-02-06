@@ -7,13 +7,13 @@ public class SymmetricDiff {
         int[] arr = new int[0];
         int count = 0;
         boolean flag = true;
-        for (int i = 0; i < left.length; i++) {
+        for (int k : left) {
             if (left.length > 0) {
                 flag = true;
             }
             if (right.length > 0) {
-                for (int j = 0; j < right.length; j++) {
-                    if (left[i] == right[j]) {
+                for (int i : right) {
+                    if (k == i) {
                         flag = false;
                         break;
                     }
@@ -22,14 +22,14 @@ public class SymmetricDiff {
             if (flag) {
                 count++;
                 arr = Arrays.copyOf(arr, count);
-                arr[count - 1] = left[i];
+                arr[count - 1] = k;
             }
         }
         if (right.length > 0) {
-            for (int i = 0; i < right.length; i++) {
+            for (int k : right) {
                 flag = true;
-                for (int j = 0; j < left.length; j++) {
-                    if (right[i] == left[j]) {
+                for (int i : left) {
+                    if (k == i) {
                         flag = false;
                         break;
                     }
@@ -37,7 +37,7 @@ public class SymmetricDiff {
                 if (flag) {
                     count++;
                     arr = Arrays.copyOf(arr, count);
-                    arr[count - 1] = right[i];
+                    arr[count - 1] = k;
                 }
             }
         }
