@@ -12,19 +12,17 @@ public class JavaNameValidator {
 
     public static boolean isNameValid(String name) {
 
-        boolean isValid = false;
-        if (!name.isEmpty() && isLowerLatinLetter(name.codePointAt(FIRST_CHAR))) {
+        boolean isValid = !name.isEmpty() && isLowerLatinLetter(name.codePointAt(FIRST_CHAR));
+        if (isValid) {
             for (int i = START_INT; i < name.length(); i++) {
                 int code = name.codePointAt(i);
-                if (isLowerLatinLetter(code)
+                if (!(isLowerLatinLetter(code)
                         || isUpperLatinLetter(code)
                         || isSpecialSymbol(code)
-                        || Character.isDigit(name.charAt(i))) {
-                    isValid = true;
-                    continue;
+                        || Character.isDigit(name.charAt(i)))) {
+                    isValid = false;
+                    break;
                 }
-                isValid = false;
-                break;
             }
         }
         return isValid;
