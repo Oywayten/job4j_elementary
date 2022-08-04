@@ -21,10 +21,10 @@ public class JavaNameValidator {
                         || isSpecialSymbol(code)
                         || Character.isDigit(name.charAt(i))) {
                     isValid = true;
-                } else {
-                    isValid = false;
-                    break;
+                    continue;
                 }
+                isValid = false;
+                break;
             }
         }
         return isValid;
